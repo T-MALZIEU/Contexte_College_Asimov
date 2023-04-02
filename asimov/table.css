@@ -1,0 +1,156 @@
+/* Set font family and size */
+body {
+    font-family: 'Bungee', sans-serif;
+    font-size: 20px;
+    background-color: #222;
+    color: #fff;
+  }
+  
+  /* Style the table */
+  table {
+    border-collapse: separate;
+    border-spacing: 0px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the table header */
+  thead {
+    background-color: #f70976;
+    text-align: left;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Style the table header cells */
+  th {
+    padding: 20px;
+  }
+  
+  /* Style the table body */
+  tbody {
+    background-color: #222;
+  }
+  
+  /* Style the table body rows */
+  tr:nth-child(even) {
+    background-color: #333;
+  }
+  
+  tr:hover {
+    background-color: #f70976;
+    color: white;
+  }
+ 
+  
+  /* Style the table body cells */
+  td {
+    padding: 20px;
+    border: none;
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Add some margin to the table */
+  table + table {
+    margin-top: 40px;
+  }
+  
+  
+/* Style links */
+a {
+    color: #f70976;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    color: #fff;
+    background-color: #f70976;
+    padding: 5px 10px;
+    border-radius: 20px;
+  }
+  
+  /* Style headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #f70976;
+  }
+  
+  /* Style paragraphs */
+  p {
+    margin-bottom: 20px;
+  }
+  
+  /* Style lists */
+  ul, ol {
+    margin-bottom: 20px;
+  }
+  
+  /* Add some margin to the table */
+  table + table {
+    margin-top: 20px;
+  }
+
+  .error{
+    font-size: large;
+    /* font-family: fantasy; */
+    font-weight: bold;
+    color: seashell;
+    background-color: firebrick;
+    text-align: center;
+    border: 0.5rem double seashell;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    
+}
+
+.infos{
+    font-size: large;
+    /* font-family: fantasy; */
+    font-weight: bold;
+    color: seashell;
+    background-color:seagreen;
+    text-align: center;
+    border: 0.5rem double seashell;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    
+}
+
+.asimov{
+    background-color:darkslategray;
+    color: seashell;
+    font-style: italic;
+    width: 100%;
+    font-size: 2em;
+    /* font-family: 'Harlow Solid','magneto','comic sans MS'; */
+    
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+button {
+    background-color: #f70976;
+    color: white;
+    font-family: 'Bungee', sans-serif;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+button:hover {
+    background-color: #fff;
+    color: #f70976;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }

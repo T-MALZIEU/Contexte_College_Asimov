@@ -1,0 +1,68 @@
+.error{
+    font-size: large;
+    font-family: fantasy;
+    font-weight: bold;
+    color: seashell;
+    background-color: firebrick;
+    text-align: center;
+    border: 0.5rem double seashell;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    
+}
+
+.infos{
+    font-size: large;
+    font-family: fantasy;
+    font-weight: bold;
+    color: seashell;
+    background-color:seagreen;
+    text-align: center;
+    border: 0.5rem double seashell;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    
+}
+
+.asimov{
+    background-color:darkslategray;
+    color: seashell;
+    font-style: italic;
+    font-size: 75px;
+    font-family: 'Harlow Solid','magneto','comic sans MS';
+    
+}
+
+body{
+    font-family:fantasy;
+    background-color: seashell;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.auth{
+    text-align: center;
+}
+
+
+.button {
+    background-color: #f70976;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+.button:hover {
+    background-color: #fff;
+    color: #f70976;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+
+
+
+
