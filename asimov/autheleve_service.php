@@ -29,6 +29,9 @@ try{
         $_SESSION['loggedin']=TRUE;
         $_SESSION['estprof']=FALSE;
         
+        $_SESSION['start'] = time();
+        $_SESSION['expire'] = $_SESSION['start'] + (40 * 60);
+        
         
         //echo("Bienvenue ".$prenom.' '.$nom);
         header("location:index.php");

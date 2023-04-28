@@ -8,7 +8,7 @@ try{
     $matricule = $_GET["matricule"];
     $mdp = $_GET["mdp"];
     
-    $req = "SELECT profid,profnom,profprenom FROM professeur WHERE profid = :matr AND profmdp = :mdp";
+    $req = "SELECT profid,profnom,profprenom,estdir FROM professeur WHERE profid = :matr AND profmdp = :mdp";
     $stmt = $pdo->prepare($req);
     $stmt->bindParam(":matr",$matricule,PDO::PARAM_STR);
     $stmt->bindParam(":mdp",$mdp,PDO::PARAM_STR);
@@ -20,12 +20,14 @@ try{
         $stmt->bindColumn('profnom',$nom);
         $stmt->bindColumn('profprenom',$prenom);
         $stmt->bindColumn('profid',$id);
+        $stmt->bindColumn('estdir',$dir);
         $stmt->fetch();
         
         session_start();
         $_SESSION['nom']=$nom;
         $_SESSION['prenom']=$prenom;
         $_SESSION['id']=$id;
+        $_SESSION['dir']=$dir;
         $_SESSION['loggedin']=TRUE;
         $_SESSION['estprof']=TRUE;
         

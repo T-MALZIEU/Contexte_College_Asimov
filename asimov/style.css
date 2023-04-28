@@ -1,68 +1,68 @@
-.error{
-    font-size: large;
-    font-family: fantasy;
-    font-weight: bold;
-    color: seashell;
-    background-color: firebrick;
-    text-align: center;
-    border: 0.5rem double seashell;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    
-}
-
-.infos{
-    font-size: large;
-    font-family: fantasy;
-    font-weight: bold;
-    color: seashell;
-    background-color:seagreen;
-    text-align: center;
-    border: 0.5rem double seashell;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    
-}
-
-.asimov{
-    background-color:darkslategray;
-    color: seashell;
-    font-style: italic;
-    font-size: 75px;
-    font-family: 'Harlow Solid','magneto','comic sans MS';
-    
-}
-
-body{
-    font-family:fantasy;
-    background-color: seashell;
-}
-
-input[type=number] {
-    -moz-appearance: textfield;
-}
-
-.auth{
-    text-align: center;
-}
-
-
-.button {
-    background-color: #f70976;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
-    font-weight: bold;
-    cursor: pointer;
+body {
+    background-color: #1f1f1f;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
-.button:hover {
-    background-color: #fff;
-    color: #f70976;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  .asimov {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem;
+  }
+  
+  table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 80%;
+  }
+  
+  th {
+    background-color: #ff5e5e;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+  
+  td {
+    background-color: #505050;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .notes td:first-child {
+    font-weight: bold;
+  }
+  
+  .error {
+    background-color: #ff5e5e;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0.5rem;
+    margin: 1rem auto;
+    width: 80%;
+  }
+  
+  a {
+    color: #ff5e5e;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  h3 {
+    color: #ff5e5e;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 2rem auto 1rem;
+    text-align: center;
   }
 
-
-
-
+  input[type=number] {
+    -moz-appearance: textfield;
+}

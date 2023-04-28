@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="style.css">
     <title>ASIMOV-etudiant : Notes</title>
 </head>
 <body>
@@ -21,6 +21,20 @@ if ($_SESSION['estprof']==TRUE) {
     header('location:index.php');
     exit;
 }
+
+if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 600)) {
+    // last request was more than 30 minutes ago
+    session_unset();     // unset $_SESSION variable for the run-time 
+    session_destroy();   // destroy session data in storage
+    session_start();
+        $_SESSION['ERREUR']="<div class=\"error\"> DÉCONEXION AUTOMATIQUE : VOUS ETES RESTÉ INACTIF TROP LONGTEMPS</div>";
+    header('location:authmenu.php');
+    exit;
+}
+$_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
+
+
+
 ?>
     <div class="asimov">Notes de <?=$_SESSION['prenom']?> <?=$_SESSION['nom']?></div>
 
@@ -64,13 +78,13 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC))
 }
 if ($lastMatId !== null) {
     $avg = $sum / $count;
-    echo "<tr><td colspan='2'>Moyenne:</td><td>$avg</td></tr>";
+    echo "<tr><td colspan='2'>Moyenne:</td><td>".round($avg, 2)."</td></tr>";
     echo "</table>";
 }
 
 if ($totalCount > 0) {
     $totalAvg = $totalSum / $totalCount;
-    echo "<h3>Moyenne globale: $totalAvg</h3> ";
+    echo "<h3>Moyenne globale: ".round($totalAvg, 2)."</h3> ";
 }
     ?>
     <a href="index.php">Retour au menu</a>

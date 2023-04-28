@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -23,6 +23,16 @@ if ($_SESSION['estprof']==FALSE) {
     header('location:index.php');
     exit;
 }
+if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 600)) {
+    // last request was more than 30 minutes ago
+    session_unset();     // unset $_SESSION variable for the run-time 
+    session_destroy();   // destroy session data in storage
+    session_start();
+        $_SESSION['ERREUR']="<div class=\"error\"> DÉCONEXION AUTOMATIQUE : VOUS ETES RESTÉ INACTIF TROP LONGTEMPS</div>";
+    header('location:authmenu.php');
+    exit;
+}
+$_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
 
 // Connect to database using PDO
 $db = new PDO('mysql:host=localhost;dbname=asimov;charset=utf8','root','root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
